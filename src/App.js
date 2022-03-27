@@ -5,10 +5,7 @@ import defaultData from "./data";
 
 function App() {
   const [expenses, setExpenses] = useState(defaultData);
-  const [year, setYear] = useState("2021");
-  const [filterExpenses, setFilterExpenses] = useState(
-    expenses.filter((expense) => expense.date.getFullYear().toString() === year)
-  );
+
   console.log(expenses);
   return (
     <main>
@@ -20,13 +17,7 @@ function App() {
           <div className="underline"></div>
         </div>
         <Form setExpenses={setExpenses} />
-        <ExpenseInfo
-          expenses={expenses}
-          filterExpenses={filterExpenses}
-          setFilterExpenses={setFilterExpenses}
-          year={year}
-          setYear={setYear}
-        />
+        <ExpenseInfo expenses={expenses} />
         {console.log(expenses)}
       </section>
     </main>
