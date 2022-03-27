@@ -1,0 +1,21 @@
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.filter-section h4 {
+  margin-bottom: 0;
+  color: var(--clr-white);
+  font-weight: 600;
+}
+
+.filter-section .select {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}

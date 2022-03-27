@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form/Form";
+import ExpenseInfo from "./components/ExpenseInfo/ExpenseInfo";
+import defaultData from "./data";
 
 function App() {
+  const [expenses, setExpenses] = useState(defaultData);
+  const [year, setYear] = useState("2021");
+  const [filterExpenses, setFilterExpenses] = useState(
+    expenses.filter((expense) => expense.date.getFullYear().toString() === year)
+  );
+  console.log(expenses);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <section className="section">
+        <div className="title">
+          <h2>
+            <span>kumar's</span> expense tracker
+          </h2>
+          <div className="underline"></div>
+        </div>
+        <Form setExpenses={setExpenses} />
+        <ExpenseInfo
+          expenses={expenses}
+          filterExpenses={filterExpenses}
+          setFilterExpenses={setFilterExpenses}
+          year={year}
+          setYear={setYear}
+        />
+        {console.log(expenses)}
+      </section>
+    </main>
   );
 }
 

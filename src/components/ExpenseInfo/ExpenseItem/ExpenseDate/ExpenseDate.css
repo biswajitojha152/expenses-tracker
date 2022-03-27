@@ -1,0 +1,23 @@
+.expense-item-time {
+  background-color: var(--clr-black);
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--clr-white);
+}
+
+.expense-item-time h3,
+h4,
+h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+  padding: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.expense-item-time h5 {
+  font-size: 0.9rem;
+}
+
+.expense-item-time h4 {
+  font-size: 0.875rem;
+}

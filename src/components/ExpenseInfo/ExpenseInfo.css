@@ -1,0 +1,21 @@
+.expense-info {
+  background-color: var(--clr-black);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  width: 92vw;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.no-info {
+  text-align: center;
+  border: 1px solid var(--clr-white);
+  padding: 1.5rem;
+  margin: 1.5rem 5rem;
+}
+
+.no-info h3 {
+  color: var(--clr-white);
+  font-weight: 600;
+  margin-bottom: 0;
+}
