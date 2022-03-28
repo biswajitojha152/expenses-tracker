@@ -12,6 +12,7 @@
 
 .chart-bar-inner {
   background-color: var(--chartbar-fill-bg);
+  transition: all 0.5s ease-in-out;
 }
 
 .chart-bar p {

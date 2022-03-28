@@ -2,7 +2,10 @@ import React from 'react';
 import "./ChartBar.css";
 
 const ChartBar = ({height, month, maxVal}) =>{
-    const percentHeight = `${(height/maxVal) * 100}%`;
+    let percentHeight = "0%";
+    if(height !==0){
+        percentHeight = `${(height/maxVal) * 100}%`;
+    } 
     console.log(percentHeight);
     return (
         <section className='chart-bar'>
