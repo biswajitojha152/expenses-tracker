@@ -1,0 +1,19 @@
+.chart-bar-outer {
+  height: 7rem;
+  width: 1rem;
+  background-color: var(--chartbar-empty-bg);
+  margin-left: 0.7rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chart-bar-inner {
+  background-color: var(--chartbar-fill-bg);
+}
+
+.chart-bar p {
+  margin-left: 0.7rem;
+}
