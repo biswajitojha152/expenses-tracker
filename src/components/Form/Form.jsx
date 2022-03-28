@@ -38,7 +38,7 @@ const Form = ({ setExpenses}) =>{
             </div>
             <div className="form-control">
                 <label htmlFor="amount">amount</label>
-                <input type="number" id='amount' name='amount' value={amount} onChange={(e)=> handleChange(e)}/>
+                <input type="number" id='amount' name='amount' min="0" step="0.01" value={amount} onChange={(e)=> handleChange(e)}/>
             </div>
             <div className="form-control">
                 <label htmlFor="date">date</label>

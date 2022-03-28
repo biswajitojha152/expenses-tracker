@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import FilterExpense from "./FilterExpense/FilterExpense";
 
 import ExpenseItem  from './ExpenseItem/ExpenseItem';
@@ -11,7 +11,9 @@ const ExpenseInfo = ({ expenses}) =>{
      const [filterExpenses, setFilterExpenses] = useState(
     expenses.filter((expense) => expense.date.getFullYear().toString() === year)
   );    
-
+    useEffect(()=>{
+        setFilterExpenses( expenses.filter((expense) => expense.date.getFullYear().toString() === year))
+    }, [expenses]);
     return (
     <section className='expense-info'>
         <FilterExpense expenses={expenses} setFilterExpenses={setFilterExpenses} year={year} setYear={setYear}/>
